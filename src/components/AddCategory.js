@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const AddCategory = ({ setCategories }) => {
 
-    const [inputValue, setInputValue] = useState("Ingrese la serie busqueda...");
+    const [inputValue, setInputValue] = useState("");
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value); 
@@ -18,10 +18,6 @@ export const AddCategory = ({ setCategories }) => {
         }
     };
 
-    const handleErrase = (e) => {
-            setInputValue(e.value="");
-        }
-
 
     return (
 
@@ -30,7 +26,7 @@ export const AddCategory = ({ setCategories }) => {
                 type="text"
                 value={inputValue}
                 onChange={handleInputChange}
-                onClick={handleErrase}
+                placeholder="Ingrese la serie busqueda..."
             />
         </form>
     )
