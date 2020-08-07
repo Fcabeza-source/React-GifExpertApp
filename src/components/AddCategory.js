@@ -5,6 +5,7 @@ export const AddCategory = ({ setCategories }) => {
 
     const [inputValue, setInputValue] = useState("");
 
+
     const handleInputChange = (e) => {
         setInputValue(e.target.value); 
     };
@@ -26,7 +27,8 @@ export const AddCategory = ({ setCategories }) => {
                 type="text"
                 value={inputValue}
                 onChange={handleInputChange}
-                placeholder="Ingrese la serie busqueda..."
+                placeholder="
+                What do you want to look for..."
             />
         </form>
     )

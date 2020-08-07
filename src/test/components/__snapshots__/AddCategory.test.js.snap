@@ -6,9 +6,9 @@ exports[`Pruebas en <AddCategory /> Debe de mostrarse correctamente  1`] = `
 >
   <input
     onChange={[Function]}
-    onClick={[Function]}
+    placeholder="Ingrese la serie busqueda..."
     type="text"
-    value="Ingrese la serie busqueda..."
+    value=""
   />
 </form>
 `;
