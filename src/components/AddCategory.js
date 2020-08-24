@@ -7,14 +7,14 @@ export const AddCategory = ({ setCategories }) => {
 
 
     const handleInputChange = (e) => {
-        setInputValue(e.target.value); 
+        setInputValue(e.target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if ( inputValue.trim().length > 2){
-            setCategories( cats => [inputValue, ...cats ]);
+        if (inputValue.trim().length > 2) {
+            setCategories(cats => [inputValue, ...cats]);
             setInputValue("");
         }
     };
@@ -23,17 +23,17 @@ export const AddCategory = ({ setCategories }) => {
     return (
 
         <form onSubmit={handleSubmit}>
-            <input 
+            <input
                 type="text"
                 value={inputValue}
                 onChange={handleInputChange}
-                placeholder="
-                What do you want to look for..."
+                placeholder="What do you want to look for..."
+                spellCheck="false"
             />
         </form>
     )
 }
 
 AddCategory.propTypes = {
-    setCategories : PropTypes.func.isRequired ,
+    setCategories: PropTypes.func.isRequired,
 }
